@@ -1,36 +1,49 @@
 # Criptoactivos.Wiki
 
-Este monorepo contiene el frontend y backend para la plataforma Criptoactivos.Wiki.
+La plataforma colaborativa para indexar y categorizar proyectos Web3 y cripto para la comunidad hispanohablante.
 
-## Estructura
+---
 
-- `frontend/` — SPA en React + TypeScript + Vite + TailwindCSS
-- `backend/` — API RESTful en Node.js + Express + TypeScript
-- `docker-compose.yml` — Orquestación de servicios
+## Tabla de Contenidos
+- [Visión y Roadmap](./docs/ROADMAP.md)
+- [Protocolo de Commits](./docs/COMMITS.md)
+- [Protocolo de Deploy](./docs/DEPLOYMENT.md)
+- [Variables de Entorno](./docs/ENVIRONMENT.md)
+- [Guía de Desarrollo Local](./docs/LOCAL_DEV.md)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Testing y Calidad](#testing-y-calidad)
+- [Contacto y Colaboración](#contacto-y-colaboracion)
 
-## Desarrollo local
+---
 
-1. Instala Docker y Docker Compose.
-2. Ejecuta:
+## Estructura del Proyecto
 
-```sh
-docker-compose up --build
+```
+criptoactivos/
+├── backend/           # Node.js/Express API
+├── frontend/          # React + Vite + TypeScript
+├── docs/              # Documentación extendida
+├── .env.example       # Variables de entorno de referencia
+├── .gitignore         # Ignora artefactos temporales
+└── README.md          # Documentación principal
 ```
 
-3. El frontend estará disponible en http://localhost:5173
-4. El backend en http://localhost:3001/api
+## Testing y Calidad
+- Cobertura del 100% en frontend.
+- Linting y formateo automático.
+- CI/CD para staging y producción.
 
-## Variables de entorno
+## Documentación extendida
+- [Roadmap y visión de producto](./docs/ROADMAP.md)
+- [Protocolo de commits](./docs/COMMITS.md)
+- [Protocolo de despliegue](./docs/DEPLOYMENT.md)
+- [Variables de entorno y ejemplos](./docs/ENVIRONMENT.md)
+- [Guía de desarrollo local](./docs/LOCAL_DEV.md)
 
-Verifica los archivos `.env.example` en cada carpeta para configurar credenciales y puertos.
+## Contacto y Colaboración
+- Pull Requests y issues bienvenidos.
+- Consulta [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md) para contribuir de forma segura.
 
 ---
 
-## Roadmap MVP
-- Listado de proyectos
-- Filtros y búsqueda básica
-- Categorías
-
----
-
-Para dudas o mejoras, abre un issue o PR.
+> **Toda la documentación extendida está disponible en la carpeta `/docs`.**
