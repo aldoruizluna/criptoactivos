@@ -9,7 +9,7 @@ La plataforma colaborativa para indexar y categorizar proyectos Web3 y cripto pa
 - [Protocolo de Commits](./docs/COMMITS.md)
 - [Protocolo de Deploy](./docs/DEPLOYMENT.md)
 - [Variables de Entorno](./docs/ENVIRONMENT.md)
-- [Guía de Desarrollo Local](./docs/LOCAL_DEV.md)
+- [Guía de Desarrollo Local (Docker, start/stop)](./docs/LOCAL_DEV.md)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Testing y Calidad](#testing-y-calidad)
 - [Contacto y Colaboración](#contacto-y-colaboracion)
@@ -23,6 +23,8 @@ criptoactivos/
 ├── backend/           # Node.js/Express API
 ├── frontend/          # React + Vite + TypeScript
 ├── docs/              # Documentación extendida
+├── start.sh           # Arranca todos los servicios con Docker Compose
+├── stop.sh            # Detiene y limpia los servicios
 ├── .env.example       # Variables de entorno de referencia
 ├── .gitignore         # Ignora artefactos temporales
 └── README.md          # Documentación principal
@@ -34,11 +36,12 @@ criptoactivos/
 - CI/CD para staging y producción.
 
 ## Documentación extendida
+Toda la documentación ampliada está en la carpeta [`/docs`](./docs). Consulta especialmente:
+- [Guía de desarrollo local (Docker, start/stop)](./docs/LOCAL_DEV.md)
 - [Roadmap y visión de producto](./docs/ROADMAP.md)
 - [Protocolo de commits](./docs/COMMITS.md)
 - [Protocolo de despliegue](./docs/DEPLOYMENT.md)
 - [Variables de entorno y ejemplos](./docs/ENVIRONMENT.md)
-- [Guía de desarrollo local](./docs/LOCAL_DEV.md)
 
 ## Contacto y Colaboración
 - Pull Requests y issues bienvenidos.

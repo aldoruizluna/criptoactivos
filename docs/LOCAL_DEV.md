@@ -1,36 +1,38 @@
-# Guía de Desarrollo Local
+# Local Development with Docker Compose
 
-## Requisitos
-- Node.js >= 18.x
-- npm >= 9.x
-- Docker (opcional, para backend y base de datos)
+Este proyecto ofrece un protocolo simple y Docker-friendly para levantar y bajar el stack completo localmente. Así aseguras que todas las dependencias (DB, backend, frontend) se inician y detienen juntas, evitando conflictos de puertos y pasos manuales.
 
-## Pasos para iniciar
+## Prerequisitos
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado y corriendo
+- No tener servicios locales ocupando los puertos `5432`, `3001`, o `5173`
 
-1. Clona el repositorio:
-   ```sh
-   git clone https://github.com/aldoruizluna/criptoactivos.git
-   cd criptoactivos
-   ```
-2. Copia y configura las variables de entorno:
-   ```sh
-   cp .env.example .env.local
-   # Edita .env.local con tus valores
-   ```
-3. Instala dependencias:
-   ```sh
-   cd frontend && npm install
-   cd ../backend && npm install
-   ```
-4. Inicia los servicios:
-   - Frontend: `npm run dev` (puerto 5173)
-   - Backend: `npm run dev` (puerto 3001)
+## Levantar todos los servicios
 
-5. Accede a la app en [http://localhost:5173](http://localhost:5173)
+```sh
+./start.sh
+```
+O manualmente:
+```sh
+docker compose up --build
+```
+- Backend: [http://localhost:3001](http://localhost:3001)
+- Frontend: [http://localhost:5173](http://localhost:5173)
 
-## Testing y linting
-- Ejecuta `npm test` y `npm run lint` en cada paquete antes de hacer commit.
+## Parar y limpiar servicios
+
+```sh
+./stop.sh
+```
+O manualmente:
+```sh
+docker compose down
+```
+
+Para eliminar todos los datos (incluyendo la base de datos):
+```sh
+docker compose down -v
+```
 
 ---
 
-[⬅️ Volver a README](../README.md)
+**Para troubleshooting avanzado, consulta la [documentación oficial de Docker Compose](https://docs.docker.com/compose/)**
