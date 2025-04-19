@@ -4,7 +4,7 @@ WORKDIR /app
 # Clean install for Docker: ensure no local node_modules or lockfile is used
 RUN rm -rf node_modules package-lock.json
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 COPY . .
 EXPOSE 5173
 ENV ROLLUP_USE_NATIVE=false
