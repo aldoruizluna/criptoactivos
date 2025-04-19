@@ -1,1 +1,30 @@
+# Node dependencies
+node_modules/
 
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+jest-coverage/
+
+# IDEs y sistema
+.vscode/
+.idea/
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Misc
+*.local
